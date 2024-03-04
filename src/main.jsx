@@ -1,12 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
 import Tasks from "./Tasks";
+import { TaskContexProvider } from "./TaskContex";
+import "./index.css";
 
-import './index.css'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-   <Tasks/>
+    <TaskContexProvider>
+      <main className="bg-zinc-900 h-screen">
+        <Tasks />
+      </main>
+    </TaskContexProvider>
   </React.StrictMode>
-)
+);
